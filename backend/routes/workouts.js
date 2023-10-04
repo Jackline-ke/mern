@@ -1,32 +1,34 @@
+//importing dependencies
 const express = require('express');
 
-//created a router
-const router = express.Router();
+const router = express.Router()
 
-//GET all workouts
+//GET workouts
 router.get('/', (req, res) =>{
-    res.json({message: 'GET all workouts'});
+    res.json({message: "GET all workouts"})
 });
 
 //GET a single workout
 router.get('/:id', (req, res) =>{
-    res.json({message: 'GET a single workout'});
+    res.json({message: "GET a single workouts"})
 });
 
-//POST a workout
+//POST a new workout
 router.post('/', (req, res) =>{
-    res.json({message: 'POST a new workout'});
+    res.json({message: "POST a new workout"})
 });
 
 //DELETE a workout
 router.delete('/:id', (req, res) =>{
-    res.json({message: "DELETE a workout"});
+    res.json({message: "DELETE a workout"})
 });
 
 //UPDATE a workout
 router.patch('/:id', (req, res) =>{
-    res.json({message: "UPDATE a workout"});
+    res.json({message: "UPDATE a new workout"})
 });
 
-//exported the router
-module.exports = router;
+
+//export the router
+module.exports = router
+
