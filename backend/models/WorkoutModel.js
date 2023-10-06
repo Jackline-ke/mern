@@ -5,14 +5,16 @@ const Schema = mongoose.Schema;
 const workoutSchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     },
     reps: {
         type: Number,
-        require: true
+        required: true
     },
     loads: {
         type: Number,
-        require: true
+        required: true
     }
 }, { timestamps: true });
+
+module.exports = mongoose.model('Workout', workoutSchema);

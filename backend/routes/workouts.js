@@ -1,6 +1,6 @@
 //importing dependencies
 const express = require('express');
-
+const { createWorkout } = require('../controllers/workoutController');
 const router = express.Router()
 
 //GET workouts
@@ -14,9 +14,7 @@ router.get('/:id', (req, res) =>{
 });
 
 //POST a new workout
-router.post('/', (req, res) =>{
-    res.json({message: "POST a new workout"})
-});
+router.post('/', createWorkout)
 
 //DELETE a workout
 router.delete('/:id', (req, res) =>{
