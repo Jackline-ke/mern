@@ -1,6 +1,6 @@
 //importing dependencies
 const express = require('express');
-const { createWorkout, getWorkouts, getWorkout, deleteWorkout } = require('../controllers/workoutController');
+const { createWorkout, getWorkouts, getWorkout, deleteWorkout, updateWorkout } = require('../controllers/workoutController');
 const router = express.Router()
 
 //GET workouts
@@ -16,9 +16,7 @@ router.post('/', createWorkout)
 router.delete('/:id', deleteWorkout);
 
 //UPDATE a workout
-router.patch('/:id', (req, res) =>{
-    res.json({message: "UPDATE a new workout"})
-});
+router.patch('/:id', updateWorkout);
 
 //export the router
 module.exports = router
